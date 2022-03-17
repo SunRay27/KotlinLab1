@@ -41,7 +41,7 @@ class AddressParser {
 
                 char = params[0].length + params[1].length + params[2].length
                 val parsedBuildingNumber = params[3].trim().split('.')[1].trim().toInt()
-                //val parsedBuildingNumber = params[3].substring(3).toInt()
+
                 //add new address to
                 returnList.add(Address(parsedIndex, parsedCityName, parsedStreetName, parsedBuildingNumber))
                 line++
