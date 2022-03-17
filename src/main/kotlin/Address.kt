@@ -1,8 +1,8 @@
  data class Address(
-    val index: Int,
+    val index: UInt,
     val cityName: String,
     val streetName: String,
-    val buildingNumber: Int
+    val buildingNumber: UInt
 ) {
      override fun toString(): String = "$index, $cityName, ул. $streetName, д. $buildingNumber"
 }

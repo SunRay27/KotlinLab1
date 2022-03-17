@@ -31,7 +31,7 @@ class AddressParser {
 
                 //just parse
                 char = 0
-                val parsedIndex = params[0].trim().toInt()
+                val parsedIndex = params[0].trim().toUInt()
 
                 char = params[0].length
                 val parsedCityName = params[1].trim()
@@ -40,7 +40,7 @@ class AddressParser {
                 val parsedStreetName = params[2].trim().split('.')[1].trim()
 
                 char = params[0].length + params[1].length + params[2].length
-                val parsedBuildingNumber = params[3].trim().split('.')[1].trim().toInt()
+                val parsedBuildingNumber = params[3].trim().split('.')[1].trim().toUInt()
 
                 //add new address to
                 returnList.add(Address(parsedIndex, parsedCityName, parsedStreetName, parsedBuildingNumber))
@@ -70,10 +70,10 @@ class AddressParser {
 
             returnList.add(
                 Address(
-                    params[0].trim().toInt(),
+                    params[0].trim().toUInt(),
                     params[1].trim(),
                     params[2].trim().split('.')[1].trim(),
-                    params[3].trim().split('.')[1].trim().toInt()
+                    params[3].trim().split('.')[1].trim().toUInt()
                 )
             )
         }
