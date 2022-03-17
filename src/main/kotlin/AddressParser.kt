@@ -2,11 +2,11 @@ import com.sun.nio.sctp.InvalidStreamException
 import java.io.File
 import java.security.InvalidParameterException
 
-class AddressParser() {
+class AddressParser {
 
     private val separator: Char = ','
 
-     fun tryParse(filePath: String): List<Address> {
+    fun tryParse(filePath: String): List<Address> {
 
         //for debug purposes
         var line = 0
@@ -55,7 +55,7 @@ class AddressParser() {
         }
     }
 
-     fun parse(filePath: String): List<Address> {
+    fun parse(filePath: String): List<Address> {
         //the same as tryParse but without any checks
 
         val file = File(filePath)
