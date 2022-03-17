@@ -4,7 +4,7 @@ import java.security.InvalidParameterException
 
 class AddressParser {
 
-    private val separator: Char = ','
+    private val SEPARATOR: Char = ','
 
     fun tryParse(filePath: String): List<Address> {
 
@@ -24,7 +24,7 @@ class AddressParser {
             val lines: List<String> = File(filePath).readLines()
             lines.forEach {
                 //split line by separator
-                val params: List<String> = it.split(separator)
+                val params: List<String> = it.split(SEPARATOR)
 
                 //check splitted array length
                 if (params.count() != 4) throw InvalidStreamException()
@@ -64,7 +64,7 @@ class AddressParser {
         val returnList: MutableList<Address> = ArrayList()
         val lines: List<String> = file.readLines()
         lines.forEach {
-            val params: List<String> = it.split(separator)
+            val params: List<String> = it.split(SEPARATOR)
 
             if (params.count() != 4) throw Exception("invalid parameter count")
 
